@@ -1,0 +1,175 @@
+@import (reference) "~luss/src/index";
+
+
+
+
+
+
+@import '/node_modules/iview/src/styles/index.less';
+//@primary-color          :   @green;
+//@line-height-base       :   1.2;
+//@input-height-base      :   24px;
+
+
+.ivu-modal{
+    .no-skin &{
+        .ivu-modal-content{
+            background-color: transparent;
+        }
+        .ivu-modal-body{
+            padding: 0;
+        }
+        .ivu-modal-footer{
+            display: none;
+        }
+    }
+}
+
+//modal
+
+
+
+//输入
+.ivu-input-wrapper{
+    &.w-auto{
+        width: auto;
+    }
+}
+
+
+
+//表单项目
+.ivu-form-item{
+    margin-bottom: 1em;
+}
+
+
+.ivu-form{
+    .ivu-form-item{
+        //display: flex;
+        //align-items: center;
+        //flex-wrap: wrap;
+    }
+    .ivu-form-item-content{
+        line-height: 1.2em;
+        //min-height: 24px;
+        >.ivu-checkbox-wrapper{
+            position: relative;
+            top: 0.5em;
+
+            .ivu-checkbox{
+                &+span{
+                    color: @grey500;
+                }
+            }
+        }
+
+        .ivu-form-item-error-tip{
+            display: inline-block;
+            top: auto;
+            left: auto;
+            margin-left: 1em;
+        }
+    }
+    .ivu-form-item-label{
+        line-height: 1.2em;
+        padding: 0.5em 0.5em 0 0em;
+    }
+}
+
+.ivu-tabs{
+
+    //使用body在纵向自动填充
+    &.stretch-v{
+        display: flex;
+        flex-direction: column;
+        .ivu-tabs-content{
+            flex: 1;
+        }
+    }
+
+    //
+    &.limit-max-height{
+        @maxh:calc(100% - 33px);
+
+        .ivu-tabs-content{
+            max-height: calc(100% - 33px);
+            .ivu-tabs-tabpane{
+                max-height: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.ivu-table{
+    .ivu-table-tip{
+        overflow-x:hidden;
+    }
+
+    .ivu-table-cell{
+        ._ph(6px);
+    }
+}
+
+.ivu-card{
+
+    .ivu-card-head{
+        padding:0.5em 14px;
+    }
+
+    //使body填满card
+    &.body100p{
+        .ivu-card-body{
+            height: 100%;
+        }
+    }
+
+    .ivu-card-body{
+        padding: 8px;
+    }
+
+    &.body-fx1{
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        .ivu-card-body{
+            flex: 1;
+        }
+    }
+}
+
+.ivu-btn{
+    &.purple{
+        background-color: @cl_flat_purple;
+        border-color: @cl_flat_purple;
+    }
+
+    &.cyan{
+        background-color: @cyan;
+        border-color: @cyan;
+    }
+    &.red{
+        background-color: @red;
+        border-color: @red;
+        color: #ffffff;
+    }
+}
+
+.ivu-input-number{
+    &.w2{
+        width: 4em;
+    }
+
+    &.w3{
+        width: 5em;
+    }
+}
+
+.ivu-slider{
+    &.ivu-slider-input{
+        .ivu-input-number{
+            margin-top: 6px;
+        }
+    }
+}
